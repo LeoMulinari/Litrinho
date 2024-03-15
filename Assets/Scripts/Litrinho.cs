@@ -16,6 +16,7 @@ public class Litrinho : MonoBehaviour
     private Rigidbody2D rig;
     float direction;
     public GameObject TelaGameOver;
+    public GameObject TelaLevelComplete;
 
     void Start()
     {
@@ -26,7 +27,12 @@ public class Litrinho : MonoBehaviour
     {
 
         pontos += Time.deltaTime * multiplicadorPontos;
-        pontosText.text = $"Pontos: {Mathf.FloorToInt(pontos)}";
+        pontosText.text = $"Distance: {Mathf.FloorToInt(pontos)}m";
+        if (pontos >= 100)
+        {
+            TelaLevelComplete.SetActive(true);
+            Time.timeScale = 0;
+        }
 
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isJumping == false)
         {
