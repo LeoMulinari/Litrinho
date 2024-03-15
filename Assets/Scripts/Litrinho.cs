@@ -12,12 +12,10 @@ public class Litrinho : MonoBehaviour
     public float jumpForce;
     private float pontos;
     public float multiplicadorPontos = 1;
-
     public Text pontosText;
-
     private Rigidbody2D rig;
-
     float direction;
+    public GameObject TelaGameOver;
 
     void Start()
     {
@@ -30,10 +28,9 @@ public class Litrinho : MonoBehaviour
         pontos += Time.deltaTime * multiplicadorPontos;
         pontosText.text = $"Pontos: {Mathf.FloorToInt(pontos)}";
 
-        if (Input.GetKeyDown(KeyCode.Space) && isJumping == false)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isJumping == false)
         {
-            rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            isJumping = true;
+            Pular();
         }
     }
 
@@ -45,8 +42,16 @@ public class Litrinho : MonoBehaviour
             isJumping = false;
         }
 
-        if(colisor.gameObject.CompareTag("Inimigo")){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (colisor.gameObject.CompareTag("Inimigo"))
+        {
+            TelaGameOver.SetActive(true);
+            Time.timeScale = 0;
         }
+    }
+
+    void Pular()
+    {
+        rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        isJumping = true;
     }
 }
