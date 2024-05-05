@@ -28,7 +28,7 @@ public class Litrinho : MonoBehaviour
 
         pontos += Time.deltaTime * multiplicadorPontos;
         pontosText.text = $"Distance: {Mathf.FloorToInt(pontos)}m";
-        if (pontos >= 100)
+        if (pontos >= 1000)
         {
             TelaLevelComplete.SetActive(true);
             Time.timeScale = 0;
