@@ -7,6 +7,7 @@ public class Jogo : MonoBehaviour
     public float modificadorVelocidade = 1f;
     public float velocidade;
     public float velocidadeMax = 15f;
+
     // Start is called before the first frame update
     void Start()
     {

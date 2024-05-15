@@ -6,24 +6,24 @@ public class GeradorCastelo : MonoBehaviour
 {
 
     public GameObject casteloPrefab;
-
+    public GameObject[] itemPrefabs;
     public float delayInicial;
     public float delayEntreInimigo;
 
     public float distanciaMinima = 4f;
     public float distanciaMaxima = 8f;
 
-    // Start is called before the first frame update
-    private void Start()
-    {
-        //InvokeRepeating("GerarInimigo", delayInicial, delayEntreCastelos);
-        StartCoroutine(GerarInimigo());
-    }
-
-    // Update is called once per frame
-
+    public float distanciaMinima1 = 15f;
+    public float distanciaMaxima1 = 30f;
     private float distanciaNecessaria;
     private float distanciaAtual;
+
+    private void Start()
+    {
+        StartCoroutine(GerarInimigo());
+
+    }
+
     private IEnumerator GerarInimigo()
     {
 
@@ -55,8 +55,38 @@ public class GeradorCastelo : MonoBehaviour
             }
 
             yield return null;
-            //yield return new WaitForSeconds(delayEntreInimigo);
+            //StartCoroutine(SpawnItem());
         }
-
     }
+
+    /*private IEnumerator SpawnItem()
+    {
+        yield return new WaitForSeconds(delayInicial);
+        GameObject ultimoItemGerado = null;
+        var distanciaNecessaria = 0f;
+
+        while (true)
+        {
+            var geracaoObjetoLiberada =
+           ultimoItemGerado == null
+           || Vector3.Distance(transform.position, ultimoItemGerado.transform.position) >= distanciaNecessaria;
+
+            this.distanciaNecessaria = distanciaNecessaria;
+
+            if (ultimoItemGerado != null)
+            {
+                distanciaAtual = Vector3.Distance(transform.position, ultimoItemGerado.transform.position);
+            }
+
+            if (geracaoObjetoLiberada)
+            {
+                var quantidadeItem = itemPrefabs.Length;
+                var indiceAleatorio = Random.Range(0, quantidadeItem);
+                var itemPrefab = itemPrefabs[indiceAleatorio];
+                ultimoItemGerado = Instantiate(itemPrefab, transform.position, Quaternion.identity);
+                distanciaNecessaria = Random.Range(distanciaMinima1, distanciaMaxima1);
+            }
+            yield return null;
+        }
+    }*/
 }
