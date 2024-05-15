@@ -50,12 +50,14 @@ public class GeradorCastelo : MonoBehaviour
 
             if (geracaoObjetoLiberada)
             {
+                var quantidadeItem = itemPrefabs.Length;
+                var indiceAleatorio = Random.Range(0, quantidadeItem);
+                var itemPrefab = itemPrefabs[indiceAleatorio];
                 ultimoInimigoGerado = Instantiate(casteloPrefab, transform.position, Quaternion.identity);
+                ultimoInimigoGerado = Instantiate(itemPrefab, new Vector2(transform.position.x + (Random.Range(4, 7)), transform.position.y), Quaternion.identity);
                 distanciaNecessaria = Random.Range(distanciaMinima, distanciaMaxima);
             }
-
             yield return null;
-            //StartCoroutine(SpawnItem());
         }
     }
 

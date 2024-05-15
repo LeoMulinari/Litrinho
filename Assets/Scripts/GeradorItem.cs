@@ -22,14 +22,6 @@ public class GeradorItem : MonoBehaviour
         StartCoroutine(SpawnItem());
     }
 
-    /* private void OnCollisionEnter2D(Collision2D colisor)
-     {
-         if (colisor.gameObject.CompareTag("Inimigo"))
-         {
-             rig_item = transform.Translate(1f, 0, 0);
-         }
-     }*/
-
     private IEnumerator SpawnItem()
     {
         yield return new WaitForSeconds(delayInicial);

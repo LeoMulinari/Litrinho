@@ -28641,7 +28641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91daef531c216f94ab9a1dd6cd4cc47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modificadorVelocidade: 0.3
+  modificadorVelocidade: 0.25
   velocidade: 7
   velocidadeMax: 15
 --- !u!4 &552410190
@@ -29139,7 +29139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154776181}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50db85c3a9010914fab27fae2ea231b0, type: 3}
   m_Name: 
@@ -29813,8 +29813,8 @@ MonoBehaviour:
   - {fileID: 7799177785762328583, guid: 7543d2b77767ee04b832c714622cc545, type: 3}
   delayInicial: 0
   delayEntreInimigo: 1.5
-  distanciaMinima: 10
-  distanciaMaxima: 18
+  distanciaMinima: 8
+  distanciaMaxima: 10
   distanciaMinima1: 50
   distanciaMaxima1: 80
 --- !u!1 &1550841135
