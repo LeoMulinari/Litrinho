@@ -18,6 +18,16 @@ public class Litrinho : MonoBehaviour
     public GameObject TelaGameOver;
     public GameObject TelaLevelComplete;
 
+    [Header("Configuração UI")]
+    public int item1;
+    public Text textitem1;
+
+    public int item2;
+    public Text textitem2;
+
+    public int item3;
+    public Text textitem3;
+
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -27,7 +37,7 @@ public class Litrinho : MonoBehaviour
     {
 
         pontos += Time.deltaTime * multiplicadorPontos;
-        pontosText.text = $"Distance: {Mathf.FloorToInt(pontos)}m";
+        pontosText.text = $"Distância: {Mathf.FloorToInt(pontos)}m";
         if (pontos >= 500)
         {
             TelaLevelComplete.SetActive(true);
@@ -59,5 +69,26 @@ public class Litrinho : MonoBehaviour
     {
         rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         isJumping = true;
+    }
+
+    public void ItemText1(int qtditem1)
+    {
+        item1 += qtditem1;
+        textitem1.text = item1.ToString();
+
+    }
+
+    public void ItemText2(int qtditem2)
+    {
+        item2 += qtditem2;
+        textitem2.text = item2.ToString();
+
+    }
+
+    public void ItemText3(int qtditem3)
+    {
+        item3 += qtditem3;
+        textitem3.text = item3.ToString();
+
     }
 }

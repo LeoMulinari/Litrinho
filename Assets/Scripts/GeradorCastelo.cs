@@ -5,6 +5,7 @@ using UnityEngine;
 public class GeradorCastelo : MonoBehaviour
 {
 
+
     public GameObject casteloPrefab;
     public GameObject[] itemPrefabs;
     public float delayInicial;
@@ -20,6 +21,7 @@ public class GeradorCastelo : MonoBehaviour
 
     private void Start()
     {
+
         StartCoroutine(GerarInimigo());
 
     }
