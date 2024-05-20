@@ -846,6 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe312baeddfe3545ac3c2a477964ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TelaInicio: {fileID: 0}
 --- !u!4 &766449451
 Transform:
   m_ObjectHideFlags: 0
@@ -1185,10 +1186,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Levels
+  m_text: "N\xCDVEIS"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: de81b2231d650d94ab20e3dd3304669f, type: 2}
-  m_sharedMaterial: {fileID: -6371434247139939288, guid: de81b2231d650d94ab20e3dd3304669f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e8d5720ea78a3194f995384126c08d44, type: 2}
+  m_sharedMaterial: {fileID: -1557289046507407441, guid: e8d5720ea78a3194f995384126c08d44, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1212,17 +1213,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 241.8
-  m_fontSizeBase: 241.8
+  m_fontSize: 280.2
+  m_fontSizeBase: 280.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
   m_lineSpacing: -10
   m_lineSpacingMax: 0

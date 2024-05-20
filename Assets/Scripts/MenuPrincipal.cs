@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
 {
+    public GameObject TelaInicio;
     public void Jogar()
     {
         SceneManager.LoadScene("MenuLevel");
@@ -26,5 +27,16 @@ public class MenuPrincipal : MonoBehaviour
     {
         Debug.Log("Sair Do Jogo");
         Application.Quit();
+    }
+
+    public void Info()
+    {
+        SceneManager.LoadScene("Credits");
+        Time.timeScale = 1;
+    }
+    public void Continuar()
+    {
+        TelaInicio.SetActive(false);
+        Time.timeScale = 1;
     }
 }
