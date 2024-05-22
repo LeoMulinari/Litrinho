@@ -49,7 +49,7 @@ public class Litrinho : MonoBehaviour
 
         pontos += Time.deltaTime * multiplicadorPontos;
         pontosText.text = $"Distância: {Mathf.FloorToInt(pontos)}m";
-        if (pontos >= 100)
+        if (pontos >= 500)
         {
             //soundController.fxGame.PlayOneShot(soundController.itemColetado);
             Time.timeScale = 0;
