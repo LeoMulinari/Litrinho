@@ -63,6 +63,7 @@ public class GeradorCastelo : MonoBehaviour
         }
     }
 
+
     /*private IEnumerator SpawnItem()
     {
         yield return new WaitForSeconds(delayInicial);

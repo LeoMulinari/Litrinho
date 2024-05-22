@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Item2 : MonoBehaviour
 {
-
+    private SoundController soundController;
     private Litrinho litrinho2;
     private Rigidbody2D rig_item2;
 
     // Start is called before the first frame update
     void Start()
     {
+        soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
         litrinho2 = FindObjectOfType(typeof(Litrinho)) as Litrinho;
         rig_item2 = GetComponent<Rigidbody2D>();
     }
@@ -25,6 +26,7 @@ public class Item2 : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            soundController.fxGame.PlayOneShot(soundController.itemColetado);
             litrinho2.ItemText3(1);
             Debug.Log("coletou");
             Destroy(this.gameObject);

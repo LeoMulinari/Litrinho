@@ -32,9 +32,14 @@ public class Litrinho : MonoBehaviour
     public Text textitem3;
     public Text postextitem3;
 
+    [Header("Configuração Sounds")]
+    private SoundController soundController;
+
     void Start()
     {
+        soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
         TelaInicio.SetActive(true);
+        TelaLevelComplete.SetActive(false);
         Time.timeScale = 0;
         rig = GetComponent<Rigidbody2D>();
     }
@@ -44,11 +49,15 @@ public class Litrinho : MonoBehaviour
 
         pontos += Time.deltaTime * multiplicadorPontos;
         pontosText.text = $"Distância: {Mathf.FloorToInt(pontos)}m";
-        if (pontos >= 500)
+        if (pontos >= 100)
         {
-            TelaLevelComplete.SetActive(true);
+            //soundController.fxGame.PlayOneShot(soundController.itemColetado);
             Time.timeScale = 0;
+
+            TelaLevelComplete.SetActive(true);
         }
+
+
 
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isJumping == false)
         {
@@ -66,13 +75,16 @@ public class Litrinho : MonoBehaviour
 
         if (colisor.gameObject.CompareTag("Inimigo"))
         {
+            soundController.fxGame.PlayOneShot(soundController.hit);
             TelaGameOver.SetActive(true);
             Time.timeScale = 0;
+
         }
     }
 
     void Pular()
     {
+        soundController.fxGame.PlayOneShot(soundController.jump);
         rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         isJumping = true;
     }
