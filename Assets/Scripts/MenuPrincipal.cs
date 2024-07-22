@@ -2,16 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuPrincipal : MonoBehaviour
 {
     private SoundController soundController;
-
+    public bool audioOn = true;
     public GameObject TelaInicio;
+    public Button volumeButton;
+    private bool canToggleVolume = true;
+
+    public Sprite volumeOnSprite;
+    public Sprite volumeOffSprite;
+    private Image volumeButtonImage;
 
     void Start()
     {
         soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
+        volumeButton.onClick.AddListener(VolumeGame);
+        volumeButtonImage = volumeButton.GetComponent<Image>();
+
+        audioOn = PlayerPrefs.GetInt("AudioOn", 1) == 1;
+        AudioListener.volume = audioOn ? 1 : 0;
+        volumeButtonImage.sprite = audioOn ? volumeOnSprite : volumeOffSprite;
     }
 
     public void Jogar()
@@ -28,6 +41,37 @@ public class MenuPrincipal : MonoBehaviour
         SceneManager.LoadScene("MenuPrincipal");
         Time.timeScale = 1;
 
+    }
+
+    public void VolumeGame()
+    {
+        if (canToggleVolume)
+        {
+            audioOn = !audioOn;
+            if (audioOn)
+            {
+                AudioListener.volume = 1;
+                volumeButtonImage.sprite = volumeOnSprite;
+            }
+            else
+            {
+                AudioListener.volume = 0;
+                volumeButtonImage.sprite = volumeOffSprite;
+            }
+
+            PlayerPrefs.SetInt("AudioOn", audioOn ? 1 : 0);
+
+            StartCoroutine(DisableVolumeButtonTemporarily());
+        }
+    }
+
+    private IEnumerator DisableVolumeButtonTemporarily()
+    {
+        canToggleVolume = false;
+        volumeButton.interactable = false;
+        yield return new WaitForSeconds(0.1f);  // Tempo para reativar o botão
+        volumeButton.interactable = true;
+        canToggleVolume = true;
     }
 
     public void Level1()

@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SoundController : MonoBehaviour
 {
+
+
+
     public AudioSource musicSource;
     public AudioClip menuMusic;
     public AudioClip levelMusic;
@@ -65,6 +68,10 @@ public class SoundController : MonoBehaviour
             PlayMusic(menuMusic);
         }
     }
+
+
+
+
 
     public void PlayMusic(AudioClip clip)
     {
