@@ -8,6 +8,7 @@ public class SoundController : MonoBehaviour
     public AudioSource musicSource;
     public AudioClip menuMusic;
     public AudioClip levelMusic;
+    public AudioClip levelMusic2;
 
 
     public AudioSource fxGame;
@@ -54,6 +55,10 @@ public class SoundController : MonoBehaviour
         if (scene.name == "Level1")
         {
             PlayMusic(levelMusic);
+        }
+        else if (scene.name == "Level2")
+        {
+            PlayMusic(levelMusic2);
         }
         else
         {

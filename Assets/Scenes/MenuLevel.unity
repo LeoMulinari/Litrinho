@@ -1987,7 +1987,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 766449450}
         m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
-        m_MethodName: VoltarMenu
+        m_MethodName: Level2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

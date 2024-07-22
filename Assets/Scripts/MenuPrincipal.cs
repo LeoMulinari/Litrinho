@@ -37,6 +37,14 @@ public class MenuPrincipal : MonoBehaviour
         Time.timeScale = 1;
 
     }
+
+    public void Level2()
+    {
+        soundController.fxGame.PlayOneShot(soundController.select);
+        SceneManager.LoadScene("Level2");
+        Time.timeScale = 1;
+
+    }
     public void Sair()
     {
         soundController.fxGame.PlayOneShot(soundController.cancel);
