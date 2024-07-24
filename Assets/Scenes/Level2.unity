@@ -8105,7 +8105,10 @@ MonoBehaviour:
   menuMusic: {fileID: 8300000, guid: 718cf084627c74b41ad8c53514b554e8, type: 3}
   levelMusic: {fileID: 8300000, guid: 89af9f09672e052469ddb8b24a86aa58, type: 3}
   levelMusic2: {fileID: 8300000, guid: 3480fa5c9b07fb046af702afe920d719, type: 3}
-  levelMusic3: {fileID: 0}
+  levelMusic3: {fileID: 8300000, guid: 8db05c7cebfc6c34db3a2f5f85f08761, type: 3}
+  levelMusic4: {fileID: 8300000, guid: b0fb2a8f4e23b7a4bb496cc5663e6c82, type: 3}
+  levelMusic5: {fileID: 0}
+  levelMusic6: {fileID: 0}
   fxGame: {fileID: 1121473561}
   itemColetado: {fileID: 8300000, guid: 6a8f409904bced542914398b614b24fa, type: 3}
   jump: {fileID: 8300000, guid: 762b3e1b017cb7043b5f166d6e43de8d, type: 3}
