@@ -31933,7 +31933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98f2891baa1e46e4bbcc91d760bac562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casteloPrefab: {fileID: 3117215183184075935, guid: 270973cfbe28fc047a6e9e19679c88fb, type: 3}
+  casteloPrefab: {fileID: 1696746676297023884, guid: de09321a2b1c7404588de6b52f6ad88c, type: 3}
   itemPrefabs:
   - {fileID: 7799177785762328583, guid: fad9f2b16c079c6469cb7c74a8332d00, type: 3}
   - {fileID: 7799177785762328583, guid: c8ef50d44b4d70948924174ce7f5659b, type: 3}

@@ -8105,6 +8105,7 @@ MonoBehaviour:
   menuMusic: {fileID: 8300000, guid: 718cf084627c74b41ad8c53514b554e8, type: 3}
   levelMusic: {fileID: 8300000, guid: 89af9f09672e052469ddb8b24a86aa58, type: 3}
   levelMusic2: {fileID: 8300000, guid: 3480fa5c9b07fb046af702afe920d719, type: 3}
+  levelMusic3: {fileID: 0}
   fxGame: {fileID: 1121473561}
   itemColetado: {fileID: 8300000, guid: 6a8f409904bced542914398b614b24fa, type: 3}
   jump: {fileID: 8300000, guid: 762b3e1b017cb7043b5f166d6e43de8d, type: 3}
@@ -14617,13 +14618,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490308134}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 18.72, y: -0.38, z: 0}
   m_LocalScale: {x: 1.0718306, y: 0.8429618, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 311266824}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &1490308136
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14688,7 +14689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b7a15081152bb4b860dfe677d7af20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: -1, y: 0}
+  direction: {x: 1, y: 0}
   velocidade: 0
 --- !u!114 &1490308138
 MonoBehaviour:
@@ -14882,7 +14883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98f2891baa1e46e4bbcc91d760bac562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casteloPrefab: {fileID: 7283151090403232435, guid: 355814ad7c058c445b046232d6afe849, type: 3}
+  casteloPrefab: {fileID: 2511840489170761403, guid: 650d7c4e3ac96e941a9ce67dc8259ce8, type: 3}
   itemPrefabs:
   - {fileID: 3723120238295968791, guid: 7baba6a90ce3b1e4e8e0fa3c388e4407, type: 3}
   - {fileID: 3723120238295968791, guid: 67093c6194e8b4f46bd039bdc27378d5, type: 3}
