@@ -1405,7 +1405,7 @@ MonoBehaviour:
   levelMusic3: {fileID: 8300000, guid: 8db05c7cebfc6c34db3a2f5f85f08761, type: 3}
   levelMusic4: {fileID: 8300000, guid: b0fb2a8f4e23b7a4bb496cc5663e6c82, type: 3}
   levelMusic5: {fileID: 8300000, guid: a6dcdd2b1bdcda44e9f44a3f5d4de58a, type: 3}
-  levelMusic6: {fileID: 0}
+  levelMusic6: {fileID: 8300000, guid: 51ce0eb394225ee469c22deddd322711, type: 3}
   fxGame: {fileID: 1665550025}
   itemColetado: {fileID: 8300000, guid: 6a8f409904bced542914398b614b24fa, type: 3}
   jump: {fileID: 8300000, guid: 762b3e1b017cb7043b5f166d6e43de8d, type: 3}
@@ -1459,7 +1459,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 0.08
   m_Pitch: 1
   Loop: 0
   Mute: 0
